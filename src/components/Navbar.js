@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { ButtonContainer } from "./Button";
+import { Icon } from "react-icons-kit";
+import { ic_add_shopping_cart } from "react-icons-kit/md/ic_add_shopping_cart";
+import { PrimaryButton } from "./Button";
 
-export default class extends Component {
+export default class Navbar extends Component {
   render() {
     return (
       <NavWrapper>
-        <div class="navbar navbar-expand-sm navbar-dark px-sm-5">
+        <div className="navbar navbar-expand-sm navbar-dark px-sm-5">
           <Link to="/" className="navbar-brand">
             SHOPMATE
           </Link>
@@ -19,12 +21,12 @@ export default class extends Component {
             </li>
           </ul>
           <Link to="/cart" className=" ml-auto">
-            <ButtonContainer>
+            <PrimaryButton>
               <span className="mr-2">
-                <i class="fa fa-shopping-cart" aria-hidden="true" />
+                <Icon size={32} icon={ic_add_shopping_cart} />
                 My Cart
               </span>
-            </ButtonContainer>
+            </PrimaryButton>
           </Link>
         </div>
       </NavWrapper>
